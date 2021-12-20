@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ap1" prefHeight="384.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8.0.201" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.PasswordManagerWindow">
+   <children>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="384.0" prefWidth="364.0" style="-fx-background-color: #F4F1DE;">
+         <children>
+            <AnchorPane layoutX="34.0" layoutY="28.0" prefHeight="213.0" prefWidth="300.0" style="-fx-border-color: gray; -fx-border-width: 2;">
+               <children>
+            		<Button fx:id="btn_update" layoutX="111.0" layoutY="179.0" mnemonicParsing="false" onAction="#updateRequest" prefHeight="25.0" prefWidth="80.0" text="Update">
+                     <font>
+                        <Font name="Leelawadee UI" size="13.0" />
+                     </font>
+                  </Button>
+                  <VBox alignment="CENTER" layoutX="22.0" layoutY="84.0" prefHeight="83.0" prefWidth="257.0" spacing="4.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" spacing="10.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="70.0" text="Site">
+                                 <font>
+                                    <Font name="Leelawadee UI" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="tf_site" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" spacing="10.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="70.0" text="Username">
+                                 <font>
+                                    <Font name="Leelawadee UI" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="tf_username" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" spacing="10.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="70.0" text="Password">
+                                 <font>
+                                    <Font name="Leelawadee UI" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="tf_pass" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER" layoutX="22.0" layoutY="49.0" spacing="10.0">
+                     <children>
+                        <Label prefHeight="19.0" prefWidth="71.0" text="Row No.">
+                           <font>
+                              <Font name="Leelawadee UI" size="13.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="cb_rownum" prefHeight="25.0" prefWidth="88.0" />
+                        <Button fx:id="btn_update1" mnemonicParsing="false" onAction="#comboOk" prefHeight="19.0" prefWidth="49.0" text="Ok">
+                           <font>
+                              <Font name="Leelawadee UI" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutY="9.0" prefHeight="25.0" prefWidth="294.0" spacing="50.0">
+                     <children>
+                        <RadioButton fx:id="rb_add" mnemonicParsing="false" selected="true" text="Add">
+                           <font>
+                              <Font name="Leelawadee UI" size="13.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="one" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="rb_edit" mnemonicParsing="false" text="Edit" toggleGroup="$one">
+                           <font>
+                              <Font name="Leelawadee UI" size="13.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="rb_delete" mnemonicParsing="false" text="Delete" toggleGroup="$one">
+                           <font>
+                              <Font name="Leelawadee UI" size="13.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <Label layoutX="4.0" layoutY="2.0" text="Client">
+               <font>
+                  <Font name="Leelawadee UI Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="ta_console" editable="false" layoutX="6.0" layoutY="261.0" prefHeight="117.0" prefWidth="355.0" />
+            <Label layoutX="8.0" layoutY="243.0" text="Console">
+               <font>
+                  <Font name="Leelawadee UI" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+    <AnchorPane layoutX="370.0" minHeight="0.0" minWidth="0.0" prefHeight="384.0" prefWidth="380.0" style="-fx-background-color: #F2CC8F;">
+         <children>
+      		<TableView fx:id="tv_server" focusTraversable="false" layoutX="3.0" layoutY="29.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="336.0" prefWidth="374.0" />
+            <Label layoutX="3.0" text="Server">
+               <font>
+                  <Font name="Leelawadee UI Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Separator layoutX="362.0" orientation="VERTICAL" prefHeight="384.0" prefWidth="11.0" />
+   </children>
+</AnchorPane>
